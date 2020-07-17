@@ -1,12 +1,40 @@
-{% extends 'layout.html' %}
+{%extends "layout.html"%}
+{% block logout %}
+<li class="nav-item"><a class="nav-link scrollto" href="{{url_for('home')}}">Home</a></li>
+<li class="nav-item"><a class="nav-link scrollto" href="{{url_for('juegos')}}">VuxMovies</a></li>
+<li class="nav-item"><a class="nav-link scrollto" href="{{url_for('logout')}}">Logout</a></li>
+{%endblock%}
 {% block content %}
 <div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">Wellcome User!</h1>
-        <hr class="my-4">
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="/logout" role="button">Logout</a>
-        </p>
+  <div class="jumbotron">
+    <h1 class="display-4">Bienvenido usuario!</h1>
+    <hr class="my-4">
+
+    <main class="container p-4">
+      <h1 class="display-4 text-center title mt-4">Mis películas</h1>
+      <div class="row">
+
+        <div class="col-md-4 offset-md-4 my-auto">
+
+          <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                {% for task in tasks %}
+                <li class="list-group-item">
+                  <h3>{{task.content}}</h3>
+                  <a href="{{url_for('delete', id=task.id)}}" class="btn btn-primary btn-lg">Delete</a>  
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+
+          </div>
+        </div>
       </div>
+    </main>
+    
+  </div>
 </div>
 {% endblock %}

@@ -1,0 +1,46 @@
+{%extends "layout.html"%}
+{% block logout %}
+<li class="nav-item"><a class="nav-link scrollto" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link scrollto" href="{{url_for('about')}}">About</a></li>
+<li class="nav-item"><a class="nav-link scrollto" href="{{url_for('get_login')}}">Login</a></li>
+{%endblock%}
+{% block content %}
+<div><img src="https://sensesofcinema.com/assets/uploads/2018/03/Feature-1.jpg" style='width: 100%;height: auto; 
+    display:block; 
+    height: auto;' border="0" alt=""></div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="container p-2">
+            <h1 class="page-heading single-col-max mx-auto p-5 text-center">Somos la compañia de entretenimiento más grande del
+                mundo.</h1>
+            <div class="page-intro single-col-max mx-auto p-5 text-center">Vux es una productora dedicada a la creación y
+                generación de contenido creativo de vanguardia e inmersivo de alta calidad en los campos del cine, las artes
+                escénicas y aplicadas, así como la publicación.
+            </div>
+        </div>
+      </div>
+      <div class="col-6 text-center ">
+        <img src="https://pbs.twimg.com/profile_images/1021365652467200001/hvnANMhE_400x400.jpg" class="mx-auto d-block"alt="">
+      </div>
+    </div>
+  </div>
+
+<section class="cta-section text-center py-5 theme-bg-dark position-relative" style="background-color: blueviolet;">
+    <div class="container cta-section text-center py-5 position-relative " >
+        <h3 class="mb-2 text-white mb-3">¡Registrate!</h3>
+        <div class="section-intro text-white mb-3 single-col-max mx-auto">Vux hace que sea muy fácil poner su
+            conocimiento aprendido en práctica, para que pueda comenzar a crear obras fantásticas sin perder la
+            rigurosidad que el cine establece.</div>
+        <div class="pt-3 text-center">
+            <a class="btn btn-light"
+                href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/">Empezar
+                    <path fill="currentColor"
+                        d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z">
+                    </path>
+                </svg><!-- <i class="fas fa-arrow-alt-circle-right ml-2"></i> --></a>
+        </div>
+    </div>
+</section>
+{%endblock%}

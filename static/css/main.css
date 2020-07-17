@@ -1,0 +1,14 @@
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.img66 {
+    width: auto;
+    height: auto;
+}
+.full-width-image {
+    height: 300px; 
+    background: url("https://i.imgur.com/Vhr2xUQ.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
